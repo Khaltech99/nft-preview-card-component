@@ -57,7 +57,37 @@ h2 {
 
 .card--grey {
     color: var(--color-softblue);
-    opacity: 0.5;
+    /* opacity: 0.5; */
     font-weight: 300;
 }
+
+/* Plan */
+.crypto {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-line);
+
+}
+.crypto__bonus , .crypto__deadline {
+    display: flex;
+}
+
+.crypto__clock , .crypto__image {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.crypto__bonus .crypto__text , .crypto__deadline .crypto__duration {
+    margin: auto 10px ;
+}
+
+.crypto--margin {
+    margin-bottom: 20px;
+}
+
+.crypto--green {
+    color: var(--color-cyan);
+}
+
 
