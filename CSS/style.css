@@ -8,6 +8,8 @@
 --cardBG: hsl(216, 50%, 16%);
 --color-line:  hsl(215, 32%, 27%);
 --color-white: hsl(0, 0%, 100%) ;
+--cursor: pointer ;
+
 
 }
 
@@ -18,12 +20,14 @@
 body {
     background-color: var(--color-mainbg);
     background-size: cover;
-    
-    font-size: 18px;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 h1 , h2 , h3 {
@@ -31,24 +35,25 @@ h1 , h2 , h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    cursor: var(--cursor);
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 } 
 
 @media screen and (min-width:768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     h2 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     } 
     
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
 }
@@ -59,18 +64,28 @@ h2 {
 
 .card {
     background-color: var(--cardBG);
-    padding: 2rem;
-    border: 1px solid ;
-    margin: 4rem;
     border-radius: 15px;
+    margin: 4rem;
+    padding: 2rem;
+    box-shadow: 0 0 100px 30px var(--cardBG);
+    
 }
 
 .card__image {
-    width: 100%;
     border-radius: 10px;
+    width: 100%;
+    opacity: 1;
+    position: relative;
+    height: auto;
+    
 }
+
 .card__heading {
     font-weight: 600;
+}
+.card__heading:hover {
+    color: var(--color-cyan);
+    transition: .3s ease-in-out;
 }
 
 .card__body {
@@ -79,13 +94,43 @@ h2 {
 
 .card--grey {
     color: var(--color-softblue);
-    /* opacity: 0.5; */
-    font-weight: 300;
+    font-weight: 400;
 }
+
+.image__hover {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 34%;
+    right: 40%;
+    left: 45%;
+    z-index: -1;
+    cursor: var(--cursor);
+  
+}
+
+.container:hover .image__hover {
+    z-index: 1;
+    
+}
+
+.container:hover .card__image {
+    
+    filter: grayscale(0.1) brightness(5) grayscale(0.5) opacity(50%) saturate(200%);
+    transition: .3s ease-in-out;
+    cursor: var(--cursor); 
+}
+
+
+
+
 @media screen and (min-width:768px) {
     .card {
-        width: 375px
-        margin: 4rem auto;
+        margin: 40px auto;
+        width: 20%;
+        
+       
+        
     }
 }
 
@@ -93,23 +138,28 @@ h2 {
 
 /* Plan */
 .crypto {
+    border-bottom: 2px solid var(--color-line);
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid var(--color-line);
-
+    width: 100%;
 }
 .crypto__bonus , .crypto__deadline {
     display: flex;
 }
 
-.crypto__clock , .crypto__image {
-    width: 40px;
-    height: 40px;
-    
+.crypto__clock   {
+    height: 2rem;
+    width: 2rem;
+    vertical-align: bottom;
+}
+.crypto__image{
+    width: 1rem;
+    height: 2rem;
+    vertical-align: bottom;
 }
 
 .crypto__bonus .crypto__text , .crypto__deadline .crypto__duration {
-    margin: auto 10px ;
+    margin: auto 5px ;
 }
 
 .crypto--margin {
@@ -125,41 +175,46 @@ h2 {
 
 .footer {
     display: flex;
-   
-    
-    
-   
+    align-items: center; 
 }
 .footer__image {
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
     border: 3px solid white;
-    
-    
+    height: 3rem;
+    margin-top: 10px;
+    width: 3rem;
+    vertical-align: center;
 }
 
 .footer__text {
-    margin-left: 25px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
 }
 .footer__text {
     color: var(--color-softblue);
 }
 .emphasy {
     color: var(--color-white);
-    opacity: 0.8;
     font-weight: 300;
+    opacity: 0.8;
+    cursor: var(--cursor);
+}
+
+.emphasy:hover {
+    color: var(--color-cyan);
+    transition: .3s ease-in-out;
+    opacity: 1;
 }
 @media screen and (min-width:768px) {
    .footer__text , .emphasy {
        font-size: 1rem;
    } 
    .footer__image {
-       width: 40px;
-       height: 40px;
        border-radius: 50%;
-       border: 3px solid var(--color-white);
+    border: 3px solid var(--color-white); 
+      
    } 
 }
 
