@@ -11,6 +11,8 @@
 
 }
 
+
+
 /* Typography */
 
 body {
@@ -20,18 +22,38 @@ body {
     font-size: 18px;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
 } 
+p {
+    font-size: 1.5rem;
+}
 
 h1 , h2 , h3 {
     color: var(--color-white);
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 } 
+
+@media screen and (min-width:768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    } 
+    
+    p {
+        font-size: 1rem;
+    }
+
+}
+
+
 
 /* Card */
 
@@ -60,6 +82,14 @@ h2 {
     /* opacity: 0.5; */
     font-weight: 300;
 }
+@media screen and (min-width:768px) {
+    .card {
+        width: 375px
+        margin: 4rem auto;
+    }
+}
+
+
 
 /* Plan */
 .crypto {
@@ -90,4 +120,46 @@ h2 {
     color: var(--color-cyan);
 }
 
+
+/* Footer */
+
+.footer {
+    display: flex;
+   
+    
+    
+   
+}
+.footer__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    
+    
+}
+
+.footer__text {
+    margin-left: 25px;
+    font-size: 1.5rem;
+}
+.footer__text {
+    color: var(--color-softblue);
+}
+.emphasy {
+    color: var(--color-white);
+    opacity: 0.8;
+    font-weight: 300;
+}
+@media screen and (min-width:768px) {
+   .footer__text , .emphasy {
+       font-size: 1rem;
+   } 
+   .footer__image {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       border: 3px solid var(--color-white);
+   } 
+}
 
