@@ -26,10 +26,38 @@ h1 , h2 , h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
 } 
+
+/* Card */
+
+.card {
+    background-color: var(--cardBG);
+    padding: 2rem;
+    border: 1px solid ;
+    margin: 4rem;
+    border-radius: 15px;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+}
+.card__heading {
+    font-weight: 600;
+}
+
+.card__body {
+    line-height: 1.5;
+}
+
+.card--grey {
+    color: var(--color-softblue);
+    opacity: 0.5;
+    font-weight: 300;
+}
 
