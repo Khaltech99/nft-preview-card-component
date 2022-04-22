@@ -68,6 +68,9 @@ h2 {
     margin: 4rem;
     padding: 2rem;
     box-shadow: 0 0 100px 30px var(--cardBG);
+    justify-content: center;
+    align-items: center;
+    position: relative;
     
 }
 
@@ -75,7 +78,7 @@ h2 {
     border-radius: 10px;
     width: 100%;
     opacity: 1;
-    position: relative;
+    
     height: auto;
     
 }
@@ -101,9 +104,8 @@ h2 {
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 34%;
-    right: 40%;
-    left: 45%;
+    top: 9rem;
+    left: 9.5rem;
     z-index: -1;
     cursor: var(--cursor);
   
